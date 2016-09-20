@@ -6,7 +6,7 @@ Gentoo overlay for the [Novena](https://www.kosagi.com/w/index.php?title=Novena_
 
 The purpose of this overlay is to provide Gentoo ebuilds shadowing each of [xobs' Novena Debian packages](https://kosagi.com/w/index.php?title=Novena_packaging_overview#Available_packages). At the time of writing, all of the current Debian packages shipped in the standard Novena microSD card image have been ported (please see [here](#status) for further details).
 
-Installation instructions for this overlay may be found [below](/#installation).
+Installation instructions for this overlay may be found [below](#installation).
 
 ## List of Provided Ebuilds
 
