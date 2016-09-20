@@ -149,7 +149,7 @@ The overlay provides the following ebuilds:
 
 These instructions assume you already have a baseline Gentoo Linux installed on your Novena, and (if you wish to use the GUI-based apps), Xfce or similar.
 
-> If you haven't yet installed Gentoo on your Novena, fear not, it is relatively straightforward to do. Please see [this page](https://wiki.gentoo.org/wiki/Novena) on the Gentoo wiki, and also [this post](https://www.kosagi.com/forums/viewtopic.php?id=282) on the Ko-usagi forum. For XFCE on Gentoo, [this wiki article](https://wiki.gentoo.org/wiki/Xfce) is a good starting point. 
+> If you haven't yet installed Gentoo on your Novena, fear not, it is relatively straightforward to do. Please see [this page](https://wiki.gentoo.org/wiki/Novena) on the Gentoo wiki, and also [this post](https://www.kosagi.com/forums/viewtopic.php?id=282) on the Ko-usagi forum. For Xfce on Gentoo, [this wiki article](https://wiki.gentoo.org/wiki/Xfce) is a good starting point. 
 
 Two installations methods are supported - direct installation, or via `layman`. Choose the instructions relevant to your chosen method below. In either case, the name of the installed repository is **gentoo-novena**.
 
