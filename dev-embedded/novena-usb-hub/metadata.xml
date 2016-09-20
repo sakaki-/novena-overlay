@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/novena-usb-hub</remote-id>
+	</upstream>
+	<longdescription>
+		Novena has power switches on its USB ports.  This program allows you to
+		list the current devices attached to various ports, and turn  power  to
+		various ports on and off.
+
+		A service is provided to ensure correct power-on behaviour at system start,
+		as well as a power-management hook to handle suspend and resume.
+
+		Please note that novena-usb-hub is currently only packaged for OpenRC,
+		not (yet) systemd.
+	</longdescription>
+</pkgmetadata>

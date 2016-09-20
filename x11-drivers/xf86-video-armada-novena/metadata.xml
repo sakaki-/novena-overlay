@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/xserver-xorg-video-armada</remote-id>
+	</upstream>
+	<longdescription>
+		This is a video driver module for the X11 server on the Novena. It supports
+		accelerated drawing through via etnadrm. No firmware uploads or binary blobs
+		in kernel or user space are required.
+
+		As with the current Ko-usagi version, libgal support is not enabled.
+	</longdescription>
+</pkgmetadata>

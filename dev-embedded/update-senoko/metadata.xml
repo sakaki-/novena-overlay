@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/firmware-senoko</remote-id>
+	</upstream>
+	<longdescription>
+		Firmware uploader for the Senoko battery/passthrough board.
+
+		Provides the update-senoko utility, which may be used to flash the Senoko
+		board on your Novena
+	</longdescription>
+</pkgmetadata>

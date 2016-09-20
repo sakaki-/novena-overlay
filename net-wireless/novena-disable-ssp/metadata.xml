@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/novena-disable-ssp</remote-id>
+	</upstream>
+	<longdescription>
+		All USB Bluetooth >= v2.1 dongles support a feature called secure simple
+		pairing, or "SSP".
+
+		Unfortunately this can cause problems with Bluetooth keyboards, which
+		often fail to reassociate.
+
+		This package provides a small daemon which will monitor all Bluetooth
+		adaptors and disable SSP on them when it sees them.
+
+		Please note that this version is only packaged for OpenRC, not (yet) systemd.
+	</longdescription>
+</pkgmetadata>

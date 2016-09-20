@@ -1,0 +1,22 @@
+#!/sbin/openrc-run
+# Copyright (c) 2016 sakaki <sakaki@deciban.com>
+# Distributed under the terms of the GNU General Public License v2
+# $Id$
+
+depend() {
+	need bluetooth
+}
+
+start() {
+   	ebegin "Starting ${SVCNAME}"
+	start-stop-daemon --start --exec /usr/sbin/novena-disable-ssp \
+		--pidfile /var/run/novena-disable-ssp.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Shutting down ${SVCNAME}"
+	start-stop-daemon --stop --exec /usr/sbin/novena-disable-ssp \
+		--pidfile /var/run/novena-disable-ssp.pid
+	eend $?
+}

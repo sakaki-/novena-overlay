@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/senoko-chibios-3</remote-id>
+	</upstream>
+	<longdescription>
+		Open-source firmware for the Senoko battery/passthrough board.
+
+		Builds from source /lib/firmware/senoko.hex (for reference, the underlying
+		ELF-format binary is also installed, to /usr/share/firmware-senoko/senoko.elf).
+
+		Once created, you can use the utility update-senoko (from package
+		dev-embedded/update-senoko) to write senoko.hex to the board.
+	</longdescription>
+</pkgmetadata>

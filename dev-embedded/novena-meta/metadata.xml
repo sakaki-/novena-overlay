@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<use>
+		<flag name='libre'>Omit all non-free software and binary blobs.</flag>
+		<flag name='kernel'>Pull in the Novena-patched kernel package(s).</flag>
+		<flag name='u-boot'>Pull in the Novena-patched u-boot, install to /boot.</flag>
+		<flag name='gui'>Pull in X.org drivers, and packages with a GUI.</flag>
+		<flag name='heirloom'>Pull in heirloom-specific packages.</flag>
+
+
+	</use>
+	<longdescription>
+		This is a metapackage. Merge it to pull in the baseline set of Novena-specific
+		packages, customized by USE-flag for your specific configuration.
+	</longdescription>
+</pkgmetadata>

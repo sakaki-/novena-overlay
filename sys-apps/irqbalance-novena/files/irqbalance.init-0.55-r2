@@ -1,0 +1,23 @@
+#!/sbin/openrc-run
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Id$
+
+depend() {
+	need localmount
+	after bootmisc
+}
+
+start() {
+	ebegin "Starting irqbalance"
+	start-stop-daemon --start --exec /usr/sbin/irqbalance \
+		--pidfile /var/run/irqbalance.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping irqbalance"
+	start-stop-daemon --stop --exec /usr/sbin/irqbalance \
+		--pidfile /var/run/irqbalance.pid
+	eend $?
+}

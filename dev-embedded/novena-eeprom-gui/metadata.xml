@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<use>
+		<flag name='gksu'>Make the application launch under gksu ('Run as root').</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">xobs/novena-eeprom-gui</remote-id>
+	</upstream>
+	<longdescription>
+		Novena single board computers contain a device-dependent descriptive EEPROM
+		that defines various parameters such as serial number, MAC address and
+		feature set.
+		This program allows you to view and manipulate this EEPROM list, via a Qt GUI.
+	</longdescription>
+</pkgmetadata>

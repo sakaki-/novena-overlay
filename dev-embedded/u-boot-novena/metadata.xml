@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/u-boot-novena</remote-id>
+	</upstream>
+	<longdescription>
+		The U-Boot bootloader, with light patches for Novena's DDR3 memory etc.
+
+		This version creates a first stage bootloader (u-boot.spl) and a main,
+		second-stage bootloader (u-boot.img), and installs these into
+		/usr/share/u-boot-novena/.
+
+		Matching the original Debian package semantics, when built this package
+		will also copy u-boot.{spl,img} to /boot (which must be mounted) and then
+		install the first stage bootloader (u-boot.spl) into the MBR of the
+		Novena's on-board micro-SD card.
+
+		In case you need to install u-boot.spl to the MBR of an SD-card
+		yourself, a utility program (novena-install-spl) is also provided.
+	</longdescription>
+</pkgmetadata>

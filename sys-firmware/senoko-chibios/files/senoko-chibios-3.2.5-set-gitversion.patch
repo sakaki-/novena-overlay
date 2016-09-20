@@ -1,0 +1,12 @@
+(sakaki: the SHA-1 hash is a function of the checkout tag, so just set it)
+---
+--- a/senoko/Makefile
++++ b/senoko/Makefile
+@@ -230,5 +230,5 @@ RULESPATH = $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC
+ RULESPATH = $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC
+ include $(RULESPATH)/rules.mk
+ 
+-gitversion.c: $(CHIBIOS)/.git/HEAD $(CHIBIOS)/.git/index
+-	echo "const char *gitversion = \"$(shell git rev-parse HEAD)\";" > $@
++gitversion.c:
++	echo "const char *gitversion = \"487a69632093d8894ff78b043141a78cabaec858\";" > $@

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/irqbalanced</remote-id>
+	</upstream>
+	<longdescription>
+		Linux systems normally send all interrupts (IRQs) to one CPU, unless they
+		are explicitly farmed out to other CPUs. This package, irqbalance-novena,
+		takes care of distributing the interrupt load among all available processors
+		on the Novena single board computer.
+
+		It is a fork of v0.56, because newer versions rely on x86-specific bits
+		that are not present on ARM.
+
+		Running irqbalance will improve performance. Notably, audio stutters much
+		less when running irqbalance. 
+
+		Please note that this version is only packaged for OpenRC, not (yet) systemd.
+	</longdescription>
+</pkgmetadata>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/xorg-novena</remote-id>
+	</upstream>
+	<longdescription>
+		Adds an X.org configuration file to select the 'armada' driver, with
+		entadrm acceleration (this is the current default for shipping
+		Novena boards at the time of writing, and does not rely on
+		galcore, or any firmware, kernel or userspace blobs). See the package
+		x11-drivers/xf86-video-armada for further details.
+
+		You can omit this package if you like; if not installed, your Novena will
+		default to using the 'modesetting' driver, which provides adequate
+		performance for day-to-day use.
+	</longdescription>
+</pkgmetadata>

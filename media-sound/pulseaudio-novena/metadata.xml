@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/pulseaudio-novena</remote-id>
+	</upstream>
+	<longdescription>
+		Support files for pulseaudio on the Novena single board computer. Installing these
+		ensures that channels are correctly named, that the audio does not 'crackle' on
+		playback, etc.
+		After installation, be sure to run "sudo emerge --config" to complete the changes
+		and restart the pulseaudio server.
+	</longdescription>
+</pkgmetadata>

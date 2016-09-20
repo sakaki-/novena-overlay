@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">xobs/novena-heirloom</remote-id>
+	</upstream>
+	<longdescription>
+		The Heirloom laptop version of the Novena SBC adds some minor extra hardware,
+		such as an internal fan. This package supports this additional hardware.
+
+		This package should _not_ be installed by Novena desktop, (regular) laptop or
+		'just the board' users.
+	</longdescription>
+</pkgmetadata>

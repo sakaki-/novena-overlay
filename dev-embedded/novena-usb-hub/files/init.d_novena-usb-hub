@@ -1,0 +1,21 @@
+#!/sbin/openrc-run
+# Copyright (c) 2016 sakaki <sakaki@deciban.com>
+# Distributed under the terms of the GNU General Public License v2
+# $Header$
+
+depend() {
+	need sysfs
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+	/usr/bin/novena-usb-hub -d u3 >/dev/null 2>&1 && \
+	/usr/bin/novena-usb-hub -e u3 >/dev/null 2>&1 && \
+	/usr/bin/novena-usb-hub -l    >/dev/null 2>&1
+	eend $?
+}
+
+stop() {
+	ebegin "Shutting down ${SVCNAME}"
+	eend $?
+}

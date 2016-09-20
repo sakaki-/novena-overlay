@@ -1,0 +1,20 @@
+(sakaki: this is already defined, in /usr/include/bluetooth/bluetooth.h)
+---
+--- a/swap.h
++++ b/swap.h
+@@ -82,6 +82,7 @@ do {						\
+ #define newa(t, n) ((t*) alloca(sizeof(t)*(n)))
+ #define malloc0(n) (calloc((n), 1))
+ 
++/*
+ static inline void bswap_128(const void *src, void *dst)
+ {
+ 	const uint8_t *s = src;
+@@ -91,6 +92,7 @@ static inline void bswap_128(const void *src, void *dst)
+ 	for (i = 0; i < 16; i++)
+ 		d[15 - i] = s[i];
+ }
++*/
+ 
+ static inline uint16_t get_le16(const void *ptr)
+ {

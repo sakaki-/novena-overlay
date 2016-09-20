@@ -1,0 +1,12 @@
+(sakaki: add missing include, needed to compile on Gentoo under 4.7.2)
+---
+--- a/EepromDev.cpp
++++ b/EepromDev.cpp
+@@ -8,6 +8,7 @@
+ #include <sys/ioctl.h>
+ #include <linux/i2c-dev.h>
+ #include <ctype.h>
++#include <linux/i2c.h>
+ #include <errno.h>
+ #include <stdio.h>
+ #include <QDebug>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<name>Russell King</name>
+		</maintainer>
+	</upstream>
+	<longdescription>
+		Userspace interface to kernel DRM services (armada specific).
+
+		This library implements the userspace interface to the kernel DRM
+		services.  DRM stands for "Direct Rendering Manager", which is the
+		kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+		The DRI is currently used on Linux to provide hardware-accelerated
+		OpenGL drivers.
+
+		This package provides the runtime environment for libdrm-armada2.
+	</longdescription>
+</pkgmetadata>
