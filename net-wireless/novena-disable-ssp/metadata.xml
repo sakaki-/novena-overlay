@@ -17,7 +17,5 @@
 
 		This package provides a small daemon which will monitor all Bluetooth
 		adaptors and disable SSP on them when it sees them.
-
-		Please note that this version is only packaged for OpenRC, not (yet) systemd.
 	</longdescription>
 </pkgmetadata>

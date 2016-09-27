@@ -19,7 +19,5 @@
 
 		Running irqbalance will improve performance. Notably, audio stutters much
 		less when running irqbalance. 
-
-		Please note that this version is only packaged for OpenRC, not (yet) systemd.
 	</longdescription>
 </pkgmetadata>
