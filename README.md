@@ -49,12 +49,17 @@ The overlay provides the following ebuilds:
 * **[dev-embedded/novena-usb-hub](https://github.com/sakaki-/gentoo-novena-overlay/tree/master/dev-embedded/novena-usb-hub)** ([upstream (xobs)](https://github.com/xobs/novena-usb-hub))
 
    This program allows you to list the current devices attached to various USB ports, and turn power to these ports on and off. A service is provided to ensure correct power-on behaviour at system start, as well as a power-management hook to handle suspend and resume. A manpage is provided.  
-   > Please note that I have currently only packaged this for OpenRC on Gentoo, not yet systemd.  
-   Once emerged, you need to:  
+   > Please note that while I have packaged this for both OpenRC and systemd on Gentoo, the systemd variant has not yet been tested.  
+   Once emerged, if using OpenRC, you need to:  
    ```console
-   # rc-update add novena-usb-hub default && service novena-usb-hub start
+   # rc-update add novena-usb-hub default
    ```  
-   to add this service to the boot sequence, and activate it.
+   to add this service to the boot sequence.
+   If using systemd, issue:
+   ```console
+   # systemctl enable novena-usb-hub
+   ```
+   instead.
 
 * **[dev-embedded/u-boot-novena](https://github.com/sakaki-/gentoo-novena-overlay/tree/master/dev-embedded/u-boot-novena)** ([upstream (xobs)](https://github.com/xobs/u-boot-novena))
 
@@ -88,22 +93,32 @@ The overlay provides the following ebuilds:
    All USB Bluetooth >= v2.1 dongles support a feature called [secure simple pairing](https://en.wikipedia.org/wiki/Bluetooth#Bluetooth_v2.1_.2B_EDR), or "SSP". Unfortunately this can cause problems with Bluetooth keyboards, which often fail to reassociate.  
    
    This package provides a small daemon which will monitor all Bluetooth adaptors and disable SSP on them when it sees them. A manpage is provided.  
-   > Please note that I have currently only packaged this for OpenRC on Gentoo, not yet systemd.  
-   Once emerged, you need to:  
+   > Please note that while I have packaged this for both OpenRC and systemd on Gentoo, the systemd variant has not yet been tested.  
+   Once emerged, if using OpenRC, you need to:  
    ```console
    # rc-update add novena-disable-ssp default && service novena-disable-ssp start
    ```  
    to add this service to the boot sequence, and activate it.
+   If using systemd, issue:
+   ```console
+   # systemctl enable novena-disable-ssp && systemctl start novena-disable-ssp
+   ```
+   instead.
 
 * **[sys-apps/irqbalance-novena](https://github.com/sakaki-/gentoo-novena-overlay/tree/master/sys-apps/irqbalance-novena)** ([upstream (xobs)](https://github.com/xobs/irqbalanced))
 
    Ebuild for a Novena-specific version of [`irqbalance`](https://github.com/xobs/irqbalanced), which allows interrupts to be farmed out to multiple CPUs. Running the `irqbalance` daemon on the Novena will improve performance (for example, audio stutters less).  
-   > Please note that I have currently only packaged this for OpenRC on Gentoo, not yet systemd.  
-   Once emerged, you need to:  
+   > Please note that while I have packaged this for both OpenRC and systemd on Gentoo, the systemd variant has not yet been tested.  
+   Once emerged, if using OpenRC, you need to:  
    ```console
    # rc-update add irqbalance default && service irqbalance start
    ```  
    to add this service to the boot sequence, and activate it.
+   If using systemd, issue:
+   ```console
+   # systemctl enable irqbalance && systemctl start irqbalance
+   ```
+   instead.
 
 * **[dev-embedded/etna_viv](https://github.com/sakaki-/gentoo-novena-overlay/tree/master/dev-embedded/etna_viv)** ([upstream](https://github.com/etnaviv/etna_viv))
 
