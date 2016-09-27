@@ -70,9 +70,9 @@ The overlay provides the following ebuilds:
    
    To enable you to install `u-boot.spl` to the MBR of other microSD cards yourself, a utility program (`novena-install-spl`) is also provided, with manpage.
 
-* **[dev-embedded/update-senoko](https://github.com/sakaki-/novena-overlay/tree/master/dev-embedded/update-senoko)** ([upstream (xobs)](https://github.com/xobs/senoko-firmware))
+* **[dev-embedded/update-senoko](https://github.com/sakaki-/novena-overlay/tree/master/dev-embedded/update-senoko)** ([upstream (xobs)](https://github.com/xobs/firmware-senoko))
 
-   Provides the `update-senoko` utility (and manpage), which may be used to flash firmware onto the Senoko battery/passthrough board on your Novena. Note that, unlike the [senoko-firmware](https://github.com/xobs/senoko-firmware) parent project, this does *not* include bundled firmware blobs. Rather, the ChibiOS firmware for the Senoko board can be easily be built from source, by emerging the `sys-firmware/senoko-chibios` package (see below).
+   Provides the `update-senoko` utility (and manpage), which may be used to flash firmware onto the Senoko battery/passthrough board on your Novena. Note that, unlike the [firmware-senoko](https://github.com/xobs/firmware-senoko) parent project, this does *not* include bundled firmware blobs. Rather, the ChibiOS firmware for the Senoko board can be easily be built from source, by emerging the `sys-firmware/senoko-chibios` package (see below).
 
 * **[sys-firmware/senoko-chibios](https://github.com/sakaki-/novena-overlay/tree/master/sys-firmware/senoko-chibios)** ([upstream (xobs)](https://github.com/xobs/irqbalanced))
 
