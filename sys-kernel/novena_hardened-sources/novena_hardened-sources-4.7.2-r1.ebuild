@@ -13,7 +13,7 @@ inherit kernel-2
 detect_version
 
 BASE_SERVER_URI="https://github.com/sakaki-"
-GITHUB_PROJECT="gentoo-novena-overlay"
+GITHUB_PROJECT="novena-overlay"
 GITHUB_PATCHES="novena-kernel-patches"
 NOVENA_HOMEPAGE_URI="${BASE_SERVER_URI}/${GITHUB_PROJECT}"
 NOVENA_PATCHES_TARBALL="${GITHUB_PATCHES}-${PV}.tar.gz"
