@@ -12,7 +12,7 @@ Installation instructions for this overlay may be found [below](#installation).
 
 The overlay provides the following ebuilds:
 
-### Ebuilds Shadowing xobs Debian Packages
+### Ebuilds Shadowing xobs' Debian Packages
 
 * **[sys-kernel/novena-sources](https://github.com/sakaki-/novena-overlay/tree/master/sys-kernel/novena-sources)** ([upstream (xobs)](https://github.com/xobs/linux-novena), [local patchset](https://github.com/sakaki-/novena-kernel-patches))
 
