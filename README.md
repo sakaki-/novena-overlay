@@ -71,6 +71,10 @@ The overlay provides the following ebuilds:
    
    To enable you to install `u-boot.spl` to the MBR of other microSD cards yourself, a utility program (`novena-install-spl`) is also provided, with manpage.
 
+* **[dev-embedded/stm32flash](https://github.com/sakaki-/novena-overlay/tree/master/dev-embedded/stm32flash)** ([upstream](https://sourceforge.net/p/stm32flash/code/))
+
+   Open source, cross-platform flash program for STM32 ARM microcontrollers using the built-in ST serial bootloader over UART or I2C. Dependency of `update-senoko` (see below).
+
 * **[dev-embedded/update-senoko](https://github.com/sakaki-/novena-overlay/tree/master/dev-embedded/update-senoko)** ([upstream (xobs)](https://github.com/xobs/firmware-senoko))
 
    Provides the `update-senoko` utility (and manpage), which may be used to flash firmware onto the Senoko battery/passthrough board on your Novena. Note that, unlike the [firmware-senoko](https://github.com/xobs/firmware-senoko) parent project, this does *not* include bundled firmware blobs. Rather, the ChibiOS firmware for the Senoko board can be easily be built from source, by emerging the `sys-firmware/senoko-chibios` package (see below).
