@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sakaki@deciban.com</email>
+		<name>sakaki</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">stm32flash</remote-id>
+	</upstream>
+	<longdescription>
+		stm32flash is a flashing program for the STM32 ARM processors
+		using the ST serial bootloader compliant with application note AN3155.
+
+		Features:
+
+		 * device identification
+		 * write to flash/RAM
+		 * read from flash/RAM
+		 * auto-detect Intel hex or raw binary input format with option
+		   to force binary
+		 * flash from binary file
+		 * save flash to binary file
+		 * verify and retry up to N times on failed writes
+		 * start execution at specified address
+		 * software reset the device when finished if -g not specified
+		 * resume already initialized connection (for when reset fails)
+		 * GPIO signalling
+		 * I²C support
+	</longdescription>
+</pkgmetadata>
