@@ -320,7 +320,7 @@ Now, install the kernel. Assuming your /boot is mounted:
 # make modules_install
 # cd /boot
 # mv zImage{,.bak}
-# mv mv novena.dtb{,.bak}
+# mv novena.dtb{,.bak}
 # cp "/usr/src/linux/arch/arm/boot/zImage" .
 # cp "/usr/src/linux/arch/arm/boot/dts/imx6q-novena.dtb" novena.dtb
 # sync
