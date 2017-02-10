@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
-EAPI="6"
+EAPI="5"
 
 inherit eutils versionator autotools
+inherit xorg-2
 
 DESCRIPTION="Accelerated video driver for the Novena's i.MX6"
 HOMEPAGE="https://github.com/xobs/xserver-xorg-video-armada"
@@ -47,6 +48,7 @@ src_prepare() {
 }
 
 src_configure() {
+	xorg-2_src_configure
 	econf 	--with-etnaviv-include=/usr/include \
 		--with-etnaviv-lib=/usr/lib \
 		--disable-vivante
