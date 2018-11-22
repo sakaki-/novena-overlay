@@ -30,7 +30,8 @@ RDEPEND="
 	>=dev-embedded/etna_viv-20160915
 	>=x11-libs/pixman-0.34.0
 	>=x11-libs/libdrm-2.4.68
-	>=x11-proto/xf86driproto-2.1.1-r1	
+	>=x11-proto/xf86driproto-2.1.1-r1
+	<x11-base/xorg-server-1.20
 "
 
 DEPEND="${RDEPEND}
@@ -49,7 +50,7 @@ src_prepare() {
 
 src_configure() {
 	xorg-2_src_configure
-	econf 	--with-etnaviv-include=/usr/include \
+	econf --with-etnaviv-include=/usr/include \
 		--with-etnaviv-lib=/usr/lib \
 		--disable-vivante
 }
