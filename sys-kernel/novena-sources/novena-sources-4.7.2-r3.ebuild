@@ -5,7 +5,7 @@
 EAPI="5"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="3"
+K_GENPATCHES_VER="5"
 K_SECURITY_UNSUPPORTED="1"
 
 inherit kernel-2
@@ -18,19 +18,26 @@ BASE_SERVER_URI="https://github.com/sakaki-"
 GITHUB_PROJECT="novena-overlay"
 GITHUB_PATCHES="novena-kernel-patches"
 NOVENA_HOMEPAGE_URI="${BASE_SERVER_URI}/${GITHUB_PROJECT}"
-NOVENA_PATCHES_TARBALL="${GITHUB_PATCHES}-${PV}.tar.gz"
-NOVENA_PATCHES_URI="${BASE_SERVER_URI}/${GITHUB_PATCHES}/archive/v${PV}.tar.gz -> ${NOVENA_PATCHES_TARBALL}"
+# manually set the r1 suffix on patchset; we generally won't want to do this
+NOVENA_PATCHES_TARBALL="${GITHUB_PATCHES}-${PV}-r2.tar.gz"
+NOVENA_PATCHES_URI="${BASE_SERVER_URI}/${GITHUB_PATCHES}/archive/v${PV}-r2.tar.gz -> ${NOVENA_PATCHES_TARBALL}"
 
 UNIPATCH_LIST="${DISTDIR}/${NOVENA_PATCHES_TARBALL}"
 UNIPATCH_STRICTORDER="yes"
 # add filenames of any patches you wish to exclude to the below list
 UNIPATCH_EXCLUDE="
+	1002_linux-4.7.3.patch
+	1003_linux-4.7.4.patch
 	1101-novena_defconfig-enable-minimal-GRKERNSEC.patch
 "
 
 HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches"
 IUSE="experimental"
-
+# make sure genpatches are available
+GENPATCHES_URI=""
+for i in ${K_WANT_GENPATCHES}; do
+	GENPATCHES_URI+="${HOMEPAGE}/tarballs/genpatches-${KV_MAJOR}.${KV_MINOR}-${K_GENPATCHES_VER}.${i}.tar.xz "
+done
 DESCRIPTION="Full sources with the Novena and Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${NOVENA_PATCHES_URI}"
 
