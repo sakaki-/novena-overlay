@@ -1,16 +1,18 @@
 # Copyright (c) 2016 sakaki <sakaki@deciban.com>
-# Copyright (c) 2018 Wade Cline <wadecline@hotmail.com>
+# Copyright (c) 2018,2021 Wade Cline <wadecline@hotmail.com>
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
-EAPI="5"
+EAPI="7"
 
-inherit autotools eutils git-r3 versionator xorg-2
+inherit autotools eutils git-r3 xorg-3
 
 DESCRIPTION="Accelerated video driver for the Novena's i.MX6"
 EGIT_BRANCH="unstable-devel"
-EGIT_REPO_URI="https://zeniv.linux.org.uk/cgit/xf86-video-armada.git"
-HOMEPAGE="https://zeniv.linux.org.uk/cgit/xf86-video-armada.git/"
+# Yes this is non-TLS HTTP but the self-signed certificate issued by the site
+# has a stupidly short expiration time.
+EGIT_REPO_URI="http://git.arm.linux.org.uk/cgit/xf86-video-armada.git"
+HOMEPAGE="http://git.arm.linux.org.uk/cgit/xf86-video-armada.git"
 
 IUSE=""
 LICENSE="GPL-2"
@@ -29,11 +31,10 @@ DEPEND="${RDEPEND}
 "
 
 src_unpack() {
-	# The git repo is hosted on an HTTPS site with a self-signed certificate,
-	# so use that certificate when connecting to the site.  Unknown why
-	# 'default' doesn't do the correct thing here, so use 'xorg-2_src_unpack'
-	# as per the stack trace that appears when using the default PKI.
-	GIT_SSL_CAINFO="${FILESDIR}/zeniv.linux.org.uk.pem" xorg-2_src_unpack
+	# Unknown why 'default' doesn't do the correct thing here, so use
+	# 'xorg-2_src_unpack' as per the stack trace that appears when using
+	# the default PKI (now xorg-3_src_unpack).
+	xorg-3_src_unpack
 }
 
 src_prepare() {
@@ -42,7 +43,7 @@ src_prepare() {
 }
 
 src_configure() {
-	xorg-2_src_configure
+	xorg-3_src_configure
 	econf --with-etnaviv-include=/usr/include \
 		--with-etnaviv-lib=/usr/lib \
 		--disable-vivante
