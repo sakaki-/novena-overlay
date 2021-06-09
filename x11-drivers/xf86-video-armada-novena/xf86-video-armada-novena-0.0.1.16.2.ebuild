@@ -1,14 +1,14 @@
 # Copyright (c) 2016 sakaki <sakaki@deciban.com>
-# Copyright (c) 2018 Wade Cline <wadecline@hotmail.com>
+# Copyright (c) 2018,2021 Wade Cline <wadecline@hotmail.com>
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
-EAPI="5"
+EAPI="7"
 
 # 'xorg-2' seems to expect git repos to be for '9999' versions only, so some
 # environment variables need to be set here and later.
 XORG_BASE_INDIVIDUAL_URI=""
-inherit autotools eutils git-r3 versionator xorg-2
+inherit autotools eutils git-r3 xorg-3
 
 DESCRIPTION="Accelerated video driver for the Novena's i.MX6"
 EGIT_BRANCH="unstable-devel"
@@ -17,8 +17,9 @@ EGIT_BRANCH="unstable-devel"
 # to be the commit from which support exists and which this ebuild is based
 # upon, even though the (fake) version number used is extremely ugly.
 EGIT_COMMIT="5d7b814e9743fa942754dd843db7b3c9e90fdc2a"
-EGIT_REPO_URI="https://zeniv.linux.org.uk/cgit/xf86-video-armada.git"
-HOMEPAGE="https://zeniv.linux.org.uk/cgit/xf86-video-armada.git/"
+# FIXME: 'https://git.arm.linux.org.uk/cgit/xf86-video-armada.git' appears to be the new location
+EGIT_REPO_URI="http://git.arm.linux.org.uk/cgit/xf86-video-armada.git"
+HOMEPAGE="http://git.arm.linux.org.uk/cgit/xf86-video-armada.git"
 
 GIT_ECLASS="git-r3"
 IUSE=""
@@ -39,11 +40,10 @@ DEPEND="${RDEPEND}
 "
 
 src_unpack() {
-	# The git repo is hosted on an HTTPS site with a self-signed certificate,
-	# so use that certificate when connecting to the site.  Unknown why
-	# 'default' doesn't do the correct thing here, so use 'xorg-2_src_unpack'
-	# as per the stack trace that appears when using the default PKI.
-	GIT_SSL_CAINFO="${FILESDIR}/zeniv.linux.org.uk.pem" xorg-2_src_unpack
+	# Unknown why 'default' doesn't do the correct thing here, so use
+	# 'xorg-2_src_unpack' as per the stack trace that appears when using
+	# the default PKI (now xorg-3_src_unpack).
+	xorg-3_src_unpack
 }
 
 src_prepare() {
@@ -52,7 +52,7 @@ src_prepare() {
 }
 
 src_configure() {
-	xorg-2_src_configure
+	xorg-3_src_configure
 	econf --with-etnaviv-include=/usr/include \
 		--with-etnaviv-lib=/usr/lib \
 		--disable-vivante

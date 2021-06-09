@@ -1,8 +1,9 @@
 # Copyright (c) 2016 sakaki <sakaki@deciban.com>
+# Copyright (c) 2021 Wade Cline <wadecline@hotmail.com>
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
-EAPI="5"
+EAPI="7"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
 K_GENPATCHES_VER="5"
